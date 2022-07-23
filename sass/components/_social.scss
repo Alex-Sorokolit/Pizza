@@ -27,7 +27,7 @@
     &__icon {
         width: 20px;
         height: 20px;
-        fill: var(--icon-gray);
+        fill: var(--background-white);
                         
         transition: fill var(--time-animatio) var(--cubic-bezier);
                         
@@ -42,12 +42,9 @@
 
     &:hover,
     &:focus {
-        background-color: var(--accent);
+        background-color: var(--accent-orange);
     }
 }
 
-@media screen and (min-width:1200px) {
-    
-}
 }
 

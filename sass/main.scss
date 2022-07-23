@@ -8,6 +8,8 @@
 
 // Components____________________________________________
 @import './components/button';
+@import './components/menu';
+
 @import './components/cardset';
 @import './components/logo';
 @import './components/social';
@@ -18,13 +20,7 @@
 
 // Main-page__________________________________________
 @import './layout/header';
-@import './layout/hero';
-@import './layout/specifics';
-@import './layout/preview';
-@import './layout/team';
-@import './layout/clients';
+@import './layout/filter';
+@import './layout/goods';
 @import './layout/footer';
 
-// Portfolio-page_____________________________________
-@import './layout/filter';
-@import './layout/portfolio';

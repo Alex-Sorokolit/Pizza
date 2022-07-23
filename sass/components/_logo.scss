@@ -1,31 +1,24 @@
 .logo {
     font-family: var(--font-decor);
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    color: var(--accent);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-green);
 
     text-decoration: none;
+    margin-right: 20px;
+    transition: color var(--time-animatio) var(--cubic-bezier);
 
-    &--black {
-            color: var(--text-black);
-            transition: color var(--time-animatio) var(--cubic-bezier);
-    
-            .logo:hover &,
-            .logo:focus & {
-                color: var(--accent);
+@media screen and (min-width: 1200px) {
+                margin-right: 50px;
             }
-        }
-
-    &--white {
-        color: var(--text-white);
-
-        transition: color var(--time-animatio) var(--cubic-bezier);
-
-        .logo:hover &,
-        .logo:focus & {
-        color: var(--accent);
-        }
 }
+.logo:hover {
+    color: var(--accent-green-hover);
+}
+
+.logo__icon {
+    fill: var(--accent-orange);
 }
