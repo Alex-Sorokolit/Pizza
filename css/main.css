@@ -202,7 +202,7 @@ h1, h2, h3 {
   transition: fill var(--time-animatio) var(--cubic-bezier), transform var(--time-animatio) var(--cubic-bezier);
 }
 .mob-close-button:hover, .mob-close-button:focus {
-  fill: var(--accent);
+  fill: var(--accent-green-hover);
   transform: rotate(90deg);
 }
 .mob-close-button__icon {
@@ -953,7 +953,7 @@ h1, h2, h3 {
   background-color: var(--background-black);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .footer-container {
     display: flex;
     justify-content: space-between;
@@ -964,6 +964,12 @@ h1, h2, h3 {
 
 .social-list {
   justify-content: center;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .social-list {
+    margin-bottom: 0px;
+  }
 }
 
 .social-list__icon--white {
