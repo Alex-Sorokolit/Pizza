@@ -8,6 +8,7 @@
   height: 100vh;
   padding: 40px 48px;
   background-color: var(--background-black);
+  // background-color: rgba(0, 0, 0,0.2);
 
   display: flex;
   flex-direction: column;
@@ -69,20 +70,32 @@ z-index: 10;
 }
 .user-name {
       font-weight: 500;
-        font-size: 30px;
+        font-size: 20px;
         line-height: 1.175;
         letter-spacing: 0.02em;
+@media screen and (min-width: 480px) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 40px;
+  }
 }
 
 
 .mob-nav-list {
   &__item {
     margin-bottom: 32px;
+    border-bottom: 1px solid var(--accent-orange);
   }
 
   &__link {
     font-weight: 500;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: var(--text-dark-gray);
@@ -90,6 +103,7 @@ z-index: 10;
     transition: var(--time-animatio) var(--cubic-bezier);
     ;
 
+    
     &:hover,
     &:focus {
       color: var(--accent-green-hover);
@@ -97,7 +111,19 @@ z-index: 10;
   }
 
 }
+.mob-nav-list__link {
+@media screen and (min-width: 480px) {
+font-size: 30px;
+  }
 
+  @media screen and (min-width: 768px) {
+font-size: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+font-size: 40px;
+  }
+}
 .mob-auth-list {
   &__item {
     margin-bottom: 32px;

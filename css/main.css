@@ -235,17 +235,33 @@ h1, h2, h3 {
 
 .user-name {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.175;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 480px) {
+  .user-name {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .user-name {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .user-name {
+    font-size: 40px;
+  }
 }
 
 .mob-nav-list__item {
   margin-bottom: 32px;
+  border-bottom: 1px solid var(--accent-orange);
 }
 .mob-nav-list__link {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--text-dark-gray);
@@ -253,6 +269,22 @@ h1, h2, h3 {
 }
 .mob-nav-list__link:hover, .mob-nav-list__link:focus {
   color: var(--accent-green-hover);
+}
+
+@media screen and (min-width: 480px) {
+  .mob-nav-list__link {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mob-nav-list__link {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mob-nav-list__link {
+    font-size: 40px;
+  }
 }
 
 .mob-auth-list__item {
@@ -291,7 +323,7 @@ h1, h2, h3 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--card-gap);
-  align-items: center;
+  align-items: stretch;
 }
 .card-set__item {
   flex-basis: calc((100% - (var(--card-item-count) - 1) * var(--card-gap)) / var(--card-item-count));
@@ -756,9 +788,24 @@ h1, h2, h3 {
 }
 
 .goods__list {
-  --card-item-count: 4;
+  --card-item-count: 1;
   margin-bottom: 30px;
   justify-content: center;
+}
+@media screen and (min-width: 480px) {
+  .goods__list {
+    --card-item-count: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .goods__list {
+    --card-item-count: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .goods__list {
+    --card-item-count: 4;
+  }
 }
 
 .goods__item {
@@ -767,9 +814,26 @@ h1, h2, h3 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 500px;
+  border: 1px solid rgb(197, 197, 197);
   padding: 15px;
   background-color: var(--background-white);
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+@media screen and (min-width: 480px) {
+  .goods__item {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .goods__item {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .goods__item {
+    width: 1200px;
+  }
 }
 
 .goods__item:hover {
@@ -793,9 +857,10 @@ h1, h2, h3 {
   fill: var(--background-black);
   cursor: pointer;
   transition: fill var(--time-animatio) var(--cubic-bezier), transform var(--time-animatio) var(--cubic-bezier);
+  display: none;
 }
 .delete-button:hover, .delete-button:focus {
-  fill: red;
+  fill: rgb(196, 44, 7);
 }
 
 .goods__name {
@@ -818,6 +883,10 @@ h1, h2, h3 {
   color: var(--text-gray);
   margin-bottom: 10px;
   flex-grow: 1;
+}
+
+.goods__box {
+  height: 100px;
 }
 
 .goods__prise {
@@ -845,6 +914,30 @@ h1, h2, h3 {
 .counter {
   display: flex;
   flex-wrap: nowrap;
+  align-items: baseline;
+  display: none;
+}
+
+.counter__button {
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  background-color: var(--accent-green);
+  border: none;
+  border-radius: 10%;
+  margin: 10px;
+}
+
+.counter__button:hover {
+  background-color: var(--accent-green-hover);
+}
+
+.count {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
 }
 
 .footer {
@@ -853,14 +946,18 @@ h1, h2, h3 {
   background-color: var(--background-black);
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (min-width: 480px) {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
 .social-list {
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .social-list__icon--white {
@@ -869,7 +966,7 @@ h1, h2, h3 {
 
 .apps {
   display: flex;
-  align-items: c;
+  justify-content: center;
 }
 
 .apps__item:not(:last-child) {

@@ -2,12 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--card-gap);
-  align-items: center;
+  align-items: stretch;
 
 
   &__item {
     flex-basis: calc( (100% - (( var(--card-item-count) - 1) * var(--card-gap) )) / var(--card-item-count));
-    
+
     }
 }
 

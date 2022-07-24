@@ -1,9 +1,19 @@
-
-
 .goods__list{
-  --card-item-count: 4;
+  --card-item-count: 1;
   margin-bottom: 30px; 
   justify-content: center; 
+
+@media screen and (min-width: 480px) {
+      --card-item-count: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+      --card-item-count: 3;
+  }
+
+  @media screen and (min-width: 1200px) {
+      --card-item-count: 4;
+  }
 }
 .goods__item {
   position: relative;
@@ -11,11 +21,25 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 500px;
-
-    // outline: 1px solid red;
+border: 1px solid rgb(197, 197, 197);
 padding:15px;
 background-color: var(--background-white);
+border-radius: 10px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+
+  @media screen and (min-width: 480px) {
+      width: 480px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      width: 768px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+
+      width: 1200px;
+    }
 }
 .goods__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -46,10 +70,11 @@ background-color: var(--background-white);
 
   &:hover,
   &:focus {
-    fill: red;
+    fill: rgb(196, 44, 7);
     // transform: rotate(90deg);
         
   }
+  display: none;
 }
 
 
@@ -75,6 +100,9 @@ background-color: var(--background-white);
     flex-grow: 1;
 
 }
+.goods__box {
+  height: 100px;
+}
 
 .goods__prise {
     font-weight: 700;
@@ -85,12 +113,13 @@ background-color: var(--background-white);
     color: var(--text-black);
     margin-bottom: 10px;
 }
-.goods__button {
-  margin-top: auto; 
-}
 
 // Button__________________________________
 
+.goods__button {
+  margin-top: auto; 
+  // display: none;
+}
 .order {
   justify-content: end;
 }
@@ -104,7 +133,28 @@ background-color: var(--background-white);
 .counter {
   display: flex;
   flex-wrap: nowrap;
+  align-items: baseline;
+  display: none;
 }
-.counter__button{
+.counter__button {
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
 
+
+width: 35px;
+height: 35px;
+background-color: var(--accent-green);
+border: none;
+border-radius: 10%;
+margin: 10px;
+}
+.counter__button:hover {
+  background-color: var(--accent-green-hover);
+}
+
+.count {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
 }
