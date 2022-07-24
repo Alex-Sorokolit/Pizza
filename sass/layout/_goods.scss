@@ -116,12 +116,10 @@ border-radius: 10px;
 
 // Button__________________________________
 
-.goods__button {
-  margin-top: auto; 
-  // display: none;
-}
+
 .order {
   justify-content: end;
+  background-color: var(--accent-orange);
 }
 .basket-icon--black {
   margin-left: 10px;
