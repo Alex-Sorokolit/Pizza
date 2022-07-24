@@ -192,6 +192,7 @@ h1, h2, h3 {
   transform: translateX(0%);
   transition: transform var(--time-animatio) var(--cubic-bezier);
   color: var(--accent-orange);
+  z-index: 10;
 }
 
 .mob-menu.is-hidden {
@@ -654,11 +655,6 @@ h1, h2, h3 {
   fill: var(--text-white);
   transition: fill var(--time-animatio) var(--cubic-bezier);
 }
-@media screen and (min-width: 768px) {
-  .open-menu-button {
-    display: none;
-  }
-}
 
 .open-menu-button:hover {
   fill: var(--accent-green-hover);
@@ -766,6 +762,7 @@ h1, h2, h3 {
 }
 
 .goods__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -777,6 +774,28 @@ h1, h2, h3 {
 
 .goods__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.delete-button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  border: transparent;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--background-black);
+  cursor: pointer;
+  transition: fill var(--time-animatio) var(--cubic-bezier), transform var(--time-animatio) var(--cubic-bezier);
+}
+.delete-button:hover, .delete-button:focus {
+  fill: red;
 }
 
 .goods__name {
@@ -821,6 +840,11 @@ h1, h2, h3 {
 .basket-icon--black {
   margin-left: 10px;
   fill: var(--background-black);
+}
+
+.counter {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .footer {
